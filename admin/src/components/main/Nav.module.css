@@ -1,0 +1,24 @@
+.nav {
+  max-width: 100rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.nav a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.active {
+  border-bottom: 3px solid blue;
+}
+
+@media (max-width: 35em) {
+  .nav a {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}

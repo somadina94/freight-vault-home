@@ -1,0 +1,42 @@
+.item {
+  max-width: 50rem;
+  width: 100%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  position: relative;
+  border-radius: 8px;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content h4 {
+  font-size: 1.2rem;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.action button {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border-radius: 8px;
+}
+
+.approve {
+  background-color: green;
+}
+
+.delete {
+  background-color: red;
+}

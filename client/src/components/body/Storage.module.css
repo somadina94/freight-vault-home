@@ -1,0 +1,41 @@
+.container {
+  margin-top: 4rem;
+  padding: 2rem;
+}
+
+.storage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: stretch;
+  justify-items: stretch;
+  row-gap: 6rem;
+  column-gap: 2rem;
+}
+
+.container h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.content {
+  padding: 2rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid gold;
+}
+
+@media (max-width: 40.7em) {
+  .storage {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 25.9em) {
+  .storage {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,14 @@
+extends baseEmail 
+
+block content 
+    p Hi #{firstName},
+        p Your order for metals with Id: (#{url}) has been approved!!!
+        //- p order Id: #{url}
+        table.btn.btn-primary(role='presentation' border='0' cellpadding='0' cellspacing='0')
+            tbody
+                tr
+                    td(align='left')
+                        table(role='presentation' border='0' cellpadding='0' cellspacing='0')
+                            tbody
+                                tr
+                                    td

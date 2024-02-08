@@ -1,0 +1,24 @@
+.container {
+  margin: auto;
+  max-width: 80rem;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.vaults {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  column-gap: 4rem;
+  row-gap: 4rem;
+}
+
+@media (max-width: 42.5em) {
+  .vaults {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

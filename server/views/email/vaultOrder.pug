@@ -1,0 +1,14 @@
+extends baseEmail 
+
+block content 
+    p Hi #{firstName},
+        p Your order to secure your metals in a vault has been received. Please contact customer support with your order Id to get instructions for payment.
+        p Order Id: #{url}
+        table.btn.btn-primary(role='presentation' border='0' cellpadding='0' cellspacing='0')
+            tbody
+                tr
+                    td(align='left')
+                        table(role='presentation' border='0' cellpadding='0' cellspacing='0')
+                            tbody
+                                tr
+                                    td

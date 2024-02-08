@@ -1,0 +1,61 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 1rem;
+  position: relative;
+}
+
+.icon {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 2rem;
+}
+
+.fee {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fee h4 {
+  background-color: #495057;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form label {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.form input {
+  border: 2px solid #495057;
+  border-radius: 8px;
+  font-size: 1.4rem;
+}
+
+.total {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.item button {
+  padding: 1rem 3rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.4rem;
+  background-color: #495057;
+  color: #fff;
+}
