@@ -44,6 +44,7 @@ const Orders = () => {
             name={el.name}
             price={el.price}
             ounce={el.ounce}
+            status={el.status}
           />
         ))}
       </div>

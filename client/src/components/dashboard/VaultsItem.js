@@ -7,28 +7,28 @@ const VaultsItem = (props) => {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
   });
 
   const lastSubDate = new Date(props.startDate).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
   });
 
   const expiryDate = new Date(props.endDate).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
   });
+
+  const currentDate = new Date();
+  const lastPaymentDate = new Date(props.endDate);
+  const months =
+    (currentDate.getFullYear() - lastPaymentDate.getFullYear()) * 12 +
+    currentDate.getMonth() -
+    lastPaymentDate.getMonth();
+
+  const debt = props.fee * months;
 
   return (
     <div className={classes.vault}>
@@ -46,16 +46,20 @@ const VaultsItem = (props) => {
         <h4>£{props.fee.toFixed(2)}</h4>
       </div>
       <div className={classes.content}>
-        <h4>Deposited</h4>
+        <h4>Date Secured</h4>
         <h4>{createdDate}</h4>
       </div>
       <div className={classes.content}>
-        <h4>Last payment</h4>
+        <h4>Last Payment Date</h4>
         <h4>{lastSubDate}</h4>
       </div>
       <div className={classes.content}>
-        <h4>Payment Expiry</h4>
+        <h4>Payment Expiry Date</h4>
         <h4>{expiryDate}</h4>
+      </div>
+      <div className={classes.content}>
+        <h4>Debt</h4>
+        <h4>£{debt.toFixed(2)}</h4>
       </div>
       <div className={classes.content}>
         <h4>Status</h4>

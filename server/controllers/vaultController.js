@@ -6,7 +6,8 @@ const Email = require("../utils/email");
 exports.createVault = async (req, res) => {
   try {
     const metal = await Product.findOne({ name: req.body.name });
-    const fee = ((metal.price * req.body.ounce) / 100) * 1;
+    // const fee = ((metal.price * req.body.ounce) / 100) * 1;
+    const fee = 867;
     const currentDate = new Date(Date.now());
     const today = new Date(Date.now());
     const expiryDate = currentDate.setMonth(currentDate.getMonth() + 1);
@@ -146,7 +147,7 @@ exports.approveVault = async (req, res) => {
       { new: true }
     );
 
-    const user = await User.findOne({ _id: req.user._id });
+    const user = await User.findOne({ _id: vault.user });
 
     await new Email(user, vault._id).sendVaultApproved();
 

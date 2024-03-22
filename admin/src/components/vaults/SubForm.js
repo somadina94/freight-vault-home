@@ -20,6 +20,7 @@ const SubForm = () => {
   const params = useParams();
   const startDateRef = useRef(null);
   const endDateRef = useRef(null);
+  const depositDateRef = useRef(null);
 
   useEffect(() => {
     const FetchVault = async () => {
@@ -40,6 +41,7 @@ const SubForm = () => {
     setShowSpinner(true);
 
     const data = {
+      depositDate: depositDateRef.current.value,
       startDate: startDateRef.current.value,
       endDate: endDateRef.current.value,
     };
@@ -74,7 +76,15 @@ const SubForm = () => {
       {showSpinner && <Spinner />}
       <h2>Update subscription dates</h2>
       <div className={classes.group}>
-        <label>Start Date</label>
+        <label>Date Secured</label>
+        <input
+          type="date"
+          ref={depositDateRef}
+          defaultValue={new Date(vault.depositDate).toISOString().split('T')[0]}
+        />
+      </div>
+      <div className={classes.group}>
+        <label>Last sub date</label>
         <input
           type="date"
           ref={startDateRef}
@@ -82,7 +92,7 @@ const SubForm = () => {
         />
       </div>
       <div className={classes.group}>
-        <label>End Date</label>
+        <label>Sub end date</label>
         <input
           type="date"
           defaultValue={new Date(vault.endDate).toISOString().split('T')[0]}

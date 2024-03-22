@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 import { useCookies } from 'react-cookie';
+import { Helmet } from 'react-helmet-async';
 
 import classes from './Vaults.module.css';
 import { getVaults } from '../../api/api';
@@ -34,24 +35,31 @@ const Vaults = () => {
     return <p className="error">Something went wrong!</p>;
   }
   return (
-    <div className={classes.container}>
-      <h2>List of Vaults</h2>
-      <div className={classes.vaults}>
-        {vaults.map((el) => (
-          <VaultsItem
-            key={el._id}
-            id={el._id}
-            name={el.name}
-            fee={el.fee}
-            ounce={el.ounce}
-            startDate={el.startDate}
-            endDate={el.endDate}
-            depositDate={el.depositDate}
-            status={el.status}
-          />
-        ))}
+    <Fragment>
+      <Helmet>
+        <title>Vaults</title>
+        <meta name="description" content="List of vaults secured" />
+        <link rel="canonical" href="/dashboard/vaults" />
+      </Helmet>
+      <div className={classes.container}>
+        <h2>List of Vaults</h2>
+        <div className={classes.vaults}>
+          {vaults.map((el) => (
+            <VaultsItem
+              key={el._id}
+              id={el._id}
+              name={el.name}
+              fee={el.fee}
+              ounce={el.ounce}
+              startDate={el.startDate}
+              endDate={el.endDate}
+              depositDate={el.depositDate}
+              status={el.status}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
 

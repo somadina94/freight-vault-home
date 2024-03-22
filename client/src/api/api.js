@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// const baseURL = `https://api.365gainfuldice.com/api/v1/`;
-const baseURL = `http://127.0.0.1:6002/api/v1/`;
+const baseURL = `https://freightvaulthome.jahbyte.com/api/v1/`;
+// const baseURL = `http://127.0.0.1:6002/api/v1/`;
 
 const axiosInstance = axios.create({
   baseURL: baseURL,
