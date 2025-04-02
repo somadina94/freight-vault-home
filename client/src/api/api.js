@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = `https://freightvaulthome.jahbyte.com/api/v1/`;
+const baseURL = `https://api.freightvaulthome.org/api/v1/`;
 // const baseURL = `http://127.0.0.1:6002/api/v1/`;
 
 const axiosInstance = axios.create({

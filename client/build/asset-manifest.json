@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.82d3af8b.css",
+    "main.js": "/static/js/main.9814871e.js",
+    "static/media/carousel-8.jpg": "/static/media/carousel-8.72f11a99a8d9d73f5ed1.jpg",
+    "static/media/carousel-1.jpg": "/static/media/carousel-1.d594dcb9ca8255754309.jpg",
+    "static/media/carousel-6.jpg": "/static/media/carousel-6.ddee94be5c7787bb23c1.jpg",
+    "static/media/carousel-7.jpg": "/static/media/carousel-7.635d8bc6da0556acfbb2.jpg",
+    "static/media/gold.png": "/static/media/gold.f86ef9be424b921fc988.png",
+    "static/media/silver.png": "/static/media/silver.244987beeec0cd83b80f.png",
+    "static/media/carousel-2.jpg": "/static/media/carousel-2.ab92386e35d60557c6d1.jpg",
+    "static/media/platinum.png": "/static/media/platinum.89e2ee6a7a692a5fb762.png",
+    "static/media/carousel-3.jpg": "/static/media/carousel-3.360306a604fb1a4ff0b4.jpg",
+    "static/media/carousel-5.jpg": "/static/media/carousel-5.8d30f038f2bdef89bf3a.jpg",
+    "static/media/carousel-4.jpg": "/static/media/carousel-4.fe9d6ca98dd2fc8ccb6a.jpg",
+    "index.html": "/index.html",
+    "main.82d3af8b.css.map": "/static/css/main.82d3af8b.css.map",
+    "main.9814871e.js.map": "/static/js/main.9814871e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.82d3af8b.css",
+    "static/js/main.9814871e.js"
+  ]
+}
